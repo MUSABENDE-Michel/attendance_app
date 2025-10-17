@@ -14,6 +14,7 @@ return new class extends Migration
     Schema::table('departments', function (Blueprint $table) {
         if (!Schema::hasColumn('departments', 'name')) {
             $table->string('name')->nullable()->after('id');
+            
         }
     });
 }
